@@ -1,4 +1,19 @@
 body {
+    background-color: aquamarine;
     font-size: 16px;
     color: #2288ee;
+    font: bolder
+}
+.test {
+    
+    margin-left: 5cm;
+    color: black;
+    background-color: rgba(0, 60, 255, 0.534);
+    background-size: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 5px;
+    height: 20px;
+    width: 30%
+   
 }
