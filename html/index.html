@@ -21,10 +21,95 @@
 			<div>
 				<p>염소와 사장</p>
 			</div>
+
+			<div class="input-area">
+				<ul>
+					<li>
+						<div>
+							<input type="text" id="ipt" />
+							<button type="button" id="btn">go!</button>
+							<p id="iptTxt"></p>
+						</div>
+					</li>
+					<li>
+						<label for="raio1">
+							<input type="radio" name="testRadio" id="radio1" value="1" />
+							radio1
+						</label>
+						<label for="radio2">
+							<input type="radio" name="testRadio" id="radio2" value="2" />
+							radio2
+						</label>
+						<label for="radio3">
+							<input type="radio" name="testRadio" id="radio3" value="3" />
+							radio3
+						</label>
+						<label for="radio4">
+							<input type="radio" name="testRadio" id="radio4" value="4" />
+							radio4
+						</label>
+						<p id="rdoTxt"></p>
+					</li>
+					<li>
+						<label for="check1">
+							<input type="checkbox" name="testCheck" id="check1" />
+							check1
+						</label>
+						<label for="check2">
+							<input type="checkbox" name="testCheck" id="check2" />
+							check2
+						</label>
+						<label for="check3">
+							<input type="checkbox" name="testCheck" id="check3" />
+							check3
+						</label>
+						<label for="check4">
+							<input type="checkbox" name="testCheck" id="check4" />
+							check4
+						</label>
+						<p id="chkTxt"></p>
+					</li>
+					<li>
+						<select name="testSelect" id="slct">
+							<option value="">select</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<p id="slctTxt"></p>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 		<script>
 			//script
+			// window.onload = function() {
+				let ipt = document.getElementById('ipt')
+				, btn = document.getElementById('btn')
+				, rdo = document.querySelector('testRadio')
+				, chk = document.querySelector('testCheck')
+				, slct = document.getElementById('slct')
+				, iptTxt = document.getElementById('iptTxt')
+				, rdoTxt = document.getElementById('rdoTxt')
+				, chkTxt = document.getElementById('chkTxt')
+				, slctTxt = document.getElementById('slctTxt');
+
+				btn.addEventListener('click', function() {
+					iptTxt.innerText = ipt.value;
+				});
+				rdo.addEventListener('change', function() {
+					console.log(rdo.value);
+					rdoTxt.innerText = rdo.value;
+				});
+				chk.addEventListener('change', function() {
+					console.log(chk.value);
+					if(this.checked){
+						chkTxt.innerText = chk.value;
+					}
+				});
+			// }
 		</script>
 		<script src="../js/common.js" ></script>
 	</body>
